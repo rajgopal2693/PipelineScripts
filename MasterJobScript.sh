@@ -14,7 +14,7 @@ stage("CheckOut Code")
 stage("JobCreation")
 {
 
-
+  sh "chmod 777 Property.xml"
   echo pwd()
   sh "java -jar /var/lib/jenkins/jenkins-cli.jar -s http://34.93.112.220:8080/ create-job POCJob1 < Property.xml"
 }
